@@ -50,6 +50,7 @@ function updateenv() {
     SYS_ARCH=$(uname -m)
     echo "pip install in-progress. Please wait..."
     ${PYTHON} -m pip install --upgrade pip
+    ${PYTHON} -m pip install --upgrade Cython
     read -p "Do you want to install dependencies for dev [y/N]? "
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
